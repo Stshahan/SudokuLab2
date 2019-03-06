@@ -149,7 +149,7 @@ public class LatinSquare {
 
 	/**
 	 * hasAllValues - return 'true' if every element from arr2 is in arr1
-	 * 
+	 * lalalalal
 	 * @version 1.1
 	 * @since Lab #1
 	 * @param arr1
