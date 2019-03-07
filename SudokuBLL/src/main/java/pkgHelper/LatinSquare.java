@@ -271,3 +271,10 @@ public class LatinSquare {
 
 
 
+
+
+
+
+
+
+
