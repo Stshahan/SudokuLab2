@@ -131,7 +131,7 @@ public class LatinSquare {
 	 * 
 	 * In this example, getRow(1) would return [1],[2],[3],[4]
 	 * 
-	 * @version 1.1 lalalalalaal
+	 * @version 1.1
 	 * @since Lab #1
 	 * @param iRow
 	 *            given row of the two dimensional array to return
