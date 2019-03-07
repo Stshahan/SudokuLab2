@@ -267,3 +267,7 @@ public class LatinSquare {
 		LatinSquare = latinSquare;
 	}
 }
+
+
+
+
