@@ -9,7 +9,7 @@ public class LatinSquare {
 	 * 
 	 * @version 1.1
 	 * @since Lab #1
-	 */
+	 */ 
 	private int[][] LatinSquare;
 
 	/**
