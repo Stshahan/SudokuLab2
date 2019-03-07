@@ -98,6 +98,7 @@ public class LatinSquare {
 	 *            The column you want returned from the two-dimensional array
 	 * @return one dimensional array of values for the given column
 	 */
+	// Chris
 	public int[] getColumn(int iCol) {
 
 		// TODO: Return a given column from LatinSquare
