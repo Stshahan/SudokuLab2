@@ -31,7 +31,7 @@ public class Sudoku extends LatinSquare {
 	protected int [] getRegion(int Col, int Row)
 	{
 		
-		//need to use SqrtSize, that will determine how many regions there will be.
+		//need to use SqrtSize, that will determine how many regions there will be in the puzzle.
 		return null;
 	}
 	
