@@ -130,7 +130,7 @@ public class LatinSquare {
 	 * 4 1 3 2 <br>
 	 * 
 	 * In this example, getRow(1) would return [1],[2],[3],[4]
-	 * 
+	 * lalalallalal
 	 * @version 1.1
 	 * @since Lab #1
 	 * @param iRow
@@ -149,7 +149,7 @@ public class LatinSquare {
 
 	/**
 	 * hasAllValues - return 'true' if every element from arr2 is in arr1
-	 * 
+	 * lalalalal
 	 * @version 1.1
 	 * @since Lab #1
 	 * @param arr1
