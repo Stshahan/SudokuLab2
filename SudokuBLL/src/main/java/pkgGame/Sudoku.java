@@ -27,7 +27,7 @@ public class Sudoku extends LatinSquare {
 		
 		return null;
 	}
-	
+	 
 	protected int [] getRegion(int Col, int Row)
 	{
 		int [] aCol = getColumn(Col); //Get the column and row the parameters represent.
