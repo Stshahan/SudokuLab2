@@ -16,7 +16,7 @@ public class Sudoku extends LatinSquare {
 		this.iSize=iSize;
 		
 		//if //check if iSqrtSize is an int. Throw exception if it isn't. 
-	}
+	} 
 
 	public Sudoku(int[][] puzzle) {
 		super(puzzle);
