@@ -6,7 +6,7 @@ import java.util.Arrays;
 import pkgHelper.LatinSquare;
 
 public class Sudoku extends LatinSquare {
-	
+	 
 	private int iSize; //length of the sudoku puzzle
 	
 	private int iSqrtSize = Math.sqrt(iSize); // square root of iSize
