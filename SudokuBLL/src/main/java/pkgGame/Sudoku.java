@@ -59,10 +59,11 @@ public class Sudoku extends LatinSquare {
 		
 		//need to use SqrtSize, that will determine how many regions there will be in the puzzle.
 		return null;
-	}
+		}
 	
-	protected int getPuzzle() {
-		return this.puzzle;
+	
+	protected int[] getPuzzle() {
+		return this.getPuzzle();
 	}
 
 	protected boolean isSudoku() {
@@ -85,4 +86,15 @@ public class Sudoku extends LatinSquare {
 		return false;
 	}
 	
-}
+	public boolean hasDuplicates() {
+		if (super.hasDuplicates(this.getPuzzle())==true) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		}
+	}
+	
+	
+	

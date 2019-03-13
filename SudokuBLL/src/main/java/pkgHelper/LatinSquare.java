@@ -30,7 +30,7 @@ public class LatinSquare {
 	 * @version 1.1
 	 * @since Lab #1
 	 */
-	private boolean bIgnoreZero
+	private boolean bIgnoreZero;
 	public LatinSquare(int[][] puzzle) {
 		this.LatinSquare = puzzle;
 	}
