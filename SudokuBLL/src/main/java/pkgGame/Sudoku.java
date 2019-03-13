@@ -32,6 +32,13 @@ public class Sudoku extends LatinSquare {
 	public Sudoku(int[][] puzzle) throws java.lang.Exception { 
 		super(puzzle);
 		
+		try {
+			if (Math.sqrt(puzzle.length) == (int)Math.sqrt(puzzle.length)) {
+				
+			}
+			
+		
+		
 	} 
 	 
 	protected int [] getRegion(int iRegionNum) {
