@@ -18,10 +18,10 @@ public class Sudoku extends LatinSquare {
 		//if //check if iSqrtSize is an int. Throw exception if it isn't. 
 	} 
 
-	public Sudoku(int[][] puzzle) {
+	public Sudoku(int[][] puzzle) { 
 		super(puzzle);
 		
-	}
+	} 
 	
 	protected int [] getRegion(int iRegionNum) {
 		
