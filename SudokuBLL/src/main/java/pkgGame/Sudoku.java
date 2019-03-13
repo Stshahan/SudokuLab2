@@ -9,7 +9,7 @@ public class Sudoku extends LatinSquare {
 	 
 	private int iSize; //length of the sudoku puzzle
 	
-	private int iSqrtSize = Math.sqrt(iSize); // square root of iSize
+	private double iSqrtSize = Math.sqrt(iSize); // square root of iSize
 	
 	public Sudoku(int iSize) {
 		super();
@@ -34,15 +34,15 @@ public class Sudoku extends LatinSquare {
 		int [] aRow = getRow(Row);
 		
 		for(int i = 0; i < iSqrtSize; i++) {
-			for (int j = 0)
+			for (int j = 0);
 		}
 		
 		//need to use SqrtSize, that will determine how many regions there will be in the puzzle.
 		return null;
 	}
 	
-	protected int getPuzzle() {
-		return this.puzzle;
+	protected int[] getPuzzle() {
+		return this.getPuzzle();
 	}
 
 	protected boolean isSudoku() {
@@ -65,4 +65,15 @@ public class Sudoku extends LatinSquare {
 		return false;
 	}
 	
-}
+	public boolean hasDuplicates() {
+		if (super.hasDuplicates(this.getPuzzle())==true) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		}
+	}
+	
+	
+	
