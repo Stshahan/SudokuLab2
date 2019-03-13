@@ -23,7 +23,7 @@ public class Sudoku extends LatinSquare {
 		}
 			catch(Exception e) {
 				System.out.print("Dude, this is Sudoku. Give me a perfect square.");
-			}
+			} //
 		}
 		//if //check if iSqrtSize is an int. Throw exception if it isn't. 
 		//Finally block will run if no matter if there's is an exception or not
