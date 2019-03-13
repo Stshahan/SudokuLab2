@@ -9,11 +9,7 @@ public class Sudoku extends LatinSquare {
 	 
 	private int iSize; //length of the sudoku puzzle
 	
-<<<<<<< HEAD
-	private double iSqrtSize = Math.sqrt(iSize); // square root of iSize
-=======
 	private int iSqrtSize; // square root of iSize
->>>>>>> branch 'master' of https://github.com/Stshahan/SudokuLab2.git
 	
 	public Sudoku(int iSize) throws java.lang.Exception {
 		
@@ -48,20 +44,16 @@ public class Sudoku extends LatinSquare {
 		int [] aCol = getColumn(Col); //Get the column and row the parameters represent.
 		int [] aRow = getRow(Row);
 		
-<<<<<<< HEAD
-		for(int i = 0; i < iSqrtSize; i++) {
-			for (int j = 0);
-=======
 		for(int i = 0; i < aCol.length; i++) {
 			for (int j = 0; j < aRow.length; j++) {
 				
 			}
->>>>>>> branch 'master' of https://github.com/Stshahan/SudokuLab2.git
 		}
 		
 		//need to use SqrtSize, that will determine how many regions there will be in the puzzle.
 		return null;
-	}
+		}
+	
 	
 	protected int[] getPuzzle() {
 		return this.getPuzzle();
