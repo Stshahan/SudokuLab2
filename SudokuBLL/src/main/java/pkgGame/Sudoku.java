@@ -22,7 +22,7 @@ public class Sudoku extends LatinSquare {
 		super(puzzle);
 		
 	} 
-	
+	 
 	protected int [] getRegion(int iRegionNum) {
 		
 		return null;
