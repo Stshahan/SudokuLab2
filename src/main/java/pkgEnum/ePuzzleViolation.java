@@ -1,6 +1,8 @@
 package pkgEnum;
 
-public enum ePuzzleViolation {ContainsZero, DupCol, DupRegion, DupRow, InvalidValue, MissingZero;
+public enum ePuzzleViolation {
+	
+	ContainsZero, DupCol, DupRegion, DupRow, InvalidValue, MissingZero;
 
 
 
@@ -14,7 +16,8 @@ static ePuzzleViolation	valueOf​(java.lang.String name) {
 
 
 static ePuzzleViolation[] values() {
-		
+
+	return this.ePuzzleViolation[];
 	}
 
 }
