@@ -31,6 +31,11 @@ public class LatinSquare {
 	 * @since Lab #1
 	 */
 	private boolean bIgnoreZero;
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> branch 'master' of https://github.com/Stshahan/SudokuLab2.git
 	public LatinSquare(int[][] puzzle) {
 		this.LatinSquare = puzzle;
 	}
@@ -266,9 +271,22 @@ public class LatinSquare {
 	public void setLatinSquare(int[][] latinSquare) {
 		LatinSquare = latinSquare;
 	}
+	protected boolean hasDuplicates() {
+		
+		for (int i = 0; i < LatinSquare.length; i++) {
+			if (hasDuplicates(getRow(i)))
+				return false;
+		}
+
+		for (int j = 0; j < LatinSquare.length; j++) {
+			if (hasDuplicates(getColumn(j)))
+				return false;
+		}
+		return true;
+	}
 }
 
-
+	
 
 
 

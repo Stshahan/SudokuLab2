@@ -121,4 +121,11 @@ public class LatinSquareTest {
 		
 		assertFalse(LS.isLatinSquare());
 	}
+	
+	@Test
+	public void hasDuplicates_Test() {
+		int[] row= {1,2,3,5};
+		LatinSquare LS = new LatinSquare();
+		LS.hasDuplicates();
+	}
 }
