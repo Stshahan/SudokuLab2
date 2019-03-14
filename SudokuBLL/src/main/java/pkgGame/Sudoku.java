@@ -33,15 +33,24 @@ public class Sudoku extends LatinSquare {
 		super(puzzle);
 		
 		try {
-			if (Math.sqrt(puzzle.length) == (int)Math.sqrt(puzzle.length)) {
+			if (Math.sqrt(puzzle.length) == (int)Math.sqrt(puzzle.length)){
 				
+				this.iSize = puzzle.length;
+				this.iSqrtSize = (int)Math.sqrt(puzzle.length);
 			}
+		}
+			catch(Exception e) {
+				System.out.print("Not an acceptable puzzle.");
+			}
+		}
+			
 			
 		
 		
-	} 
+	 
 	 
 	protected int [] getRegion(int iRegionNum) {
+		int numRegions = (iSqrtSize - 1);
 		
 		return null;
 	}
