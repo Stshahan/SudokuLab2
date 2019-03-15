@@ -113,7 +113,7 @@ public class LatinSquare {
 			Col[row] = LatinSquare[row][iCol];
 		}
 		return Col;
-	}
+	} 
 
 	/**
 	 * return LatinSquare instance attribute
@@ -277,7 +277,7 @@ public class LatinSquare {
 			if (hasDuplicates(getRow(i)))
 				return false;
 		}
-
+//Add ignore zero method here soon.
 		for (int j = 0; j < LatinSquare.length; j++) {
 			if (hasDuplicates(getColumn(j)))
 				return false;

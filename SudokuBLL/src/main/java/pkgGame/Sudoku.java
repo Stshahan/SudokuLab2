@@ -29,7 +29,7 @@ public class Sudoku extends LatinSquare {
 		//Finally block will run if no matter if there's is an exception or not
 	 
 
-	public Sudoku(int[][] puzzle) throws java.lang.Exception { 
+	public Sudoku(int[][] puzzle) throws Exception { 
 		super(puzzle);
 		
 		try {
@@ -49,8 +49,11 @@ public class Sudoku extends LatinSquare {
 		
 	 
 	 
-	protected int [] getRegion(int iRegionNum) {
+	protected int [] getRegion(int iRegionNum) throws java.lang.Exception{
 		int numRegions = (iSqrtSize - 1);
+		int[] theRegion = new int[iSize];
+		int size = iSize;
+		//Row < < ((r/sqrt(size)* sqrt(size)) + iSqrtSize (difference in rows is the square root of the size.)
 		
 		return null;
 	}
