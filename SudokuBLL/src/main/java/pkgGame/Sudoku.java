@@ -29,7 +29,7 @@ public class Sudoku extends LatinSquare {
 		//Finally block will run if no matter if there's is an exception or not
 	 
 
-	public Sudoku(int[][] puzzle) throws Exception { 
+	public Sudoku(int[][] puzzle) throws Exception {  
 		super(puzzle);
 		
 		try {
