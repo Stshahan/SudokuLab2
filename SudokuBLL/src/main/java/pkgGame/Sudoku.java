@@ -98,6 +98,7 @@ public class Sudoku extends LatinSquare {
 		return false;
 	}
 	
+	@Override
 	public boolean hasDuplicates() {
 		if (super.hasDuplicates(this.getPuzzle())==true) {
 			return true;
