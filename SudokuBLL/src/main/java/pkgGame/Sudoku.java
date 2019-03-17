@@ -16,15 +16,17 @@ public class Sudoku extends LatinSquare {
 		super();
 		this.iSize=iSize;
 		
-		try {
+		
 			if (Math.sqrt(iSize) == (int) Math.sqrt(iSize)) {
 				this.iSqrtSize = (int) Math.sqrt(iSize);
 			}
+			
+			else {
+				throw new Exception("Not perfect square");
+			}
 		}
-			catch(Exception e) {
-				System.out.print("Dude, this is Sudoku. Give me a perfect square.");
-			} //
-		}
+			
+		
 		//if //check if iSqrtSize is an int. Throw exception if it isn't. 
 		//Finally block will run if no matter if there's is an exception or not
 	 
@@ -52,10 +54,10 @@ public class Sudoku extends LatinSquare {
 	protected int [] getRegion(int i) throws java.lang.Exception{
 		int numRegions = (iSqrtSize - 1);
 		int[] theRegion = new int[iSize];
-		int size = iSize;
+		//int size = iSize;
 		int regionInd = 0;
 		int [][] copyPuzzle=this.getPuzzle();
-		if ((i+1) > size) {
+		if (i < 0 || i > numRegions) {
 			throw new Exception("Out of bounds.");
 		}
 		
