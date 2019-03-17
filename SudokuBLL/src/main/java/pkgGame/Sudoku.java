@@ -119,6 +119,10 @@ public class Sudoku extends LatinSquare {
 		if (super.hasDuplicates(this.getPuzzle())==true) {
 			return true;
 		}
+		
+		for (int k = 0; k < getPuzzle().length; k++) {
+			if (hasDuplicates(getRegion(k))) {
+				super.addPV(new PuzzleViolation(ePuzzleViolation.DupRegion,k));
 		else {
 			return false;
 		}
