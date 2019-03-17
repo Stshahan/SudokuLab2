@@ -12,7 +12,7 @@ public class Sudoku extends LatinSquare {
 	private int iSqrtSize; // square root of iSize
 	
 	public Sudoku(int iSize) throws java.lang.Exception {
-		
+		//completed
 		super();
 		this.iSize=iSize;
 		
@@ -31,7 +31,7 @@ public class Sudoku extends LatinSquare {
 
 	public Sudoku(int[][] puzzle) throws Exception {  
 		super(puzzle);
-		
+		//completed
 		try {
 			if (Math.sqrt(puzzle.length) == (int)Math.sqrt(puzzle.length)){
 				
@@ -49,13 +49,24 @@ public class Sudoku extends LatinSquare {
 		
 	 
 	 
-	protected int [] getRegion(int iRegionNum) throws java.lang.Exception{
+	protected int [] getRegion(int i) throws java.lang.Exception{
 		int numRegions = (iSqrtSize - 1);
 		int[] theRegion = new int[iSize];
 		int size = iSize;
-		//Row < < ((r/sqrt(size)* sqrt(size)) + iSqrtSize (difference in rows is the square root of the size.)
+		int regionInd = 0;
+		int [][] copyPuzzle=this.getPuzzle();
+		if ((i+1) > size) {
+			throw new Exception("Out of bounds.");
+		}
 		
-		return null;
+		//Row < < ((r/sqrt(size)* sqrt(size)) + iSqrtSize (difference in rows is the square root of the size.)
+		for(int rowNum = (i/iSqrtSize)*iSqrtSize;rowNum < ((i/iSqrtSize)*iSqrtSize)+iSqrtSize;rowNum++) {
+			for(int colNum = (i/iSqrtSize)%iSqrtSize;colNum < ((i/iSqrtSize)%iSqrtSize)+iSqrtSize;colNum++) {
+				
+				theRegion[regionInd++] = copyPuzzle[rowNum][colNum];
+			}
+		}
+		return theRegion;
 	}
 	 
 	protected int [] getRegion(int Col, int Row)
@@ -74,8 +85,8 @@ public class Sudoku extends LatinSquare {
 		}
 	
 	
-	protected int[] getPuzzle() {
-		return this.getPuzzle();
+	protected int[][] getPuzzle() {
+		return super.getLatinSquare();
 	}
 
 	protected boolean isSudoku() {
