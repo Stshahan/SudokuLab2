@@ -34,15 +34,15 @@ public class Sudoku extends LatinSquare {
 	public Sudoku(int[][] puzzle) throws Exception {  
 		super(puzzle);
 		//completed
-		try {
+		
 			if (Math.sqrt(puzzle.length) == (int)Math.sqrt(puzzle.length)){
 				
 				this.iSize = puzzle.length;
 				this.iSqrtSize = (int)Math.sqrt(puzzle.length);
 			}
-		}
-			catch(Exception e) {
-				System.out.print("Not an acceptable puzzle.");
+		
+			else {
+				throw new Exception("Not an acceptable puzzle.");
 			}
 		}
 			
@@ -51,7 +51,7 @@ public class Sudoku extends LatinSquare {
 		
 	 
 	 
-	protected int [] getRegion(int i) throws java.lang.Exception{
+	public int [] getRegion(int i) throws java.lang.Exception{
 		int numRegions = (iSqrtSize - 1);
 		int[] theRegion = new int[iSize];
 		//int size = iSize;
@@ -61,7 +61,7 @@ public class Sudoku extends LatinSquare {
 			throw new Exception("Out of bounds.");
 		}
 		
-		//Row < < ((r/sqrt(size)* sqrt(size)) + iSqrtSize (difference in rows is the square root of the size.)
+		
 		for(int rowNum = (i/iSqrtSize)*iSqrtSize;rowNum < ((i/iSqrtSize)*iSqrtSize)+iSqrtSize;rowNum++) {
 			for(int colNum = (i/iSqrtSize)%iSqrtSize;colNum < ((i/iSqrtSize)%iSqrtSize)+iSqrtSize;colNum++) {
 				
@@ -71,20 +71,23 @@ public class Sudoku extends LatinSquare {
 		return theRegion;
 	}
 	 
-	protected int [] getRegion(int Col, int Row)
+	public int [] getRegion(int Col, int Row) throws java.lang.Exception
 	{
-		int [] aCol = getColumn(Col); //Get the column and row the parameters represent.
-		int [] aRow = getRow(Row);
+		//int [] aCol = getColumn(Col); //Get the column and row the parameters represent.
+		//int [] aRow = getRow(Row);
 		
-		for(int i = 0; i < aCol.length; i++) {
-			for (int j = 0; j < aRow.length; j++) {
-				
-			}
+		int r = (Col/iSqrtSize)+((Row/iSqrtSize)+iSqrtSize);
+		if (r < 0 || r > (iSqrtSize - 1)) {
+			throw new Exception("Out of bounds.");
 		}
+		else {
+		return getRegion(r);
+		}
+	}
 		
-		//need to use SqrtSize, that will determine how many regions there will be in the puzzle.
-		return null;
-		}
+		
+		
+		
 	
 	
 	protected int[][] getPuzzle() {
